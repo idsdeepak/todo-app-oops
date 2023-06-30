@@ -28,5 +28,12 @@
       $sql = "DELETE FROM todos WHERE id = '$taskId'";
       mysqli_query($this->db, $sql);
     }
+
+  
+    public function editTask($taskId, $editedTask) {
+      $sql = "UPDATE todos SET task = '$editedTask' WHERE id = '$taskId'";
+      mysqli_query($this->db, $sql);
+    }
+  
   }
 ?>
